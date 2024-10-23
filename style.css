@@ -1,0 +1,116 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Rainbow image styling */
+.rainbow {
+    position: absolute;
+    top: 20%;  /* Adjust to place the rainbow in the desired position */
+    left: 50%;
+    transform: translateX(-50%);  /* Center the rainbow horizontally */
+    width: 80%;  /* Adjust the width of the rainbow */
+    z-index: 1;  /* Behind dolphins and text */
+    opacity: 0.8;  /* Slight transparency if needed */
+}
+
+/* Opening page specific styles */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/gift.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+}
+
+#surprise-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#surprise-button:hover {
+    background-color: #ff4500;
+}
+
+/* Text container with z-index higher than the rainbow */
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;  /* Higher than the rainbow */
+}
+
+#birthday-text {
+    font-size: 80px;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+    animation: zoom-in 3s ease-out;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Dolphins with z-index higher than the rainbow */
+.dolphin {
+    position: absolute;
+    width: 150px;
+    z-index: 2;  /* Higher than the rainbow */
+}
+
+#dolphin1 {
+    top: 20%;
+    left: -200px;
+    animation: swim-left 8s infinite linear;
+}
+
+#dolphin2 {
+    top: 60%;
+    right: -200px;
+    animation: swim-right 10s infinite linear;
+}
+
+@keyframes swim-left {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes swim-right {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 110%;
+    }
+}
